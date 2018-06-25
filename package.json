@@ -1,0 +1,34 @@
+{
+  "name": "cordova-plugin-videoplayer-nplayer",
+  "version": "1.0.1",
+  "description": "Advanced video player.",
+  "cordova": {
+    "id": "cordova-plugin-videoplayer-nplayer",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "videoplayer",
+    "stream",
+    "webdav",
+    "ftp",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.1.0"
+    },
+    {
+      "name": "cordova-ios",
+      "version": ">=4.4.0"
+    }
+  ],
+  "author": "Lael",
+  "license": "Internal/ To be determined"
+}

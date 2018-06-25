@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+		id="cordova-plugin-videoplayer-nplayer"
+		version="1.0.1">
+
+		<engines>
+  	      <engine name="cordova" version=">=3.1.0"/>
+		  <engine name="cordova-ios" version=">=4.4.0" />
+		</engines>
+
+		<name>Cordova nPlayer</name>
+		<description>Advanced video player.</description>
+		<author>Lael</author>
+		<license>Internal/ To be determined</license>
+		<keywords>cordova, videoplayer, stream, webdav, ftp</keywords>
+
+		<js-module name="nPlayer" src="www/nplayer.js" >
+			<clobbers target="window.nPlayer" />
+		</js-module>
+
+        <platform name="ios">
+            <config-file target="config.xml" parent="/*">
+                <feature name="MediaPlayerNplayer">
+                    <param name="ios-package" value="CDVMediaPlayerNplayer"/>
+                </feature>
+            </config-file>
+        </platform>
+
+</plugin>
