@@ -6,15 +6,8 @@ var cordovaVideoPlayernPlayer = function () {
 	};
 
 	this.didPlayfinished = function(data) {
-		console.log(data);
-
-		console.log('playerSeed - ' + data.playerSeed);
-		console.log('duration - ' + data.duration);
-
-		var myevent = document.createEvent("HTMLEvents");
-		myevent.initEvent("nPlayerDidPlayFinished", true, true);
-		myevent.detail = 'hello!';
-		document.dispatchEvent(myevent);
+		var playFinishEvent = new CustomEvent('nPlayerDidPlayFinished', { 'playerSeed': data.playerSeed, 'lastPos': data.duration });
+		document.dispatchEvent(playFinishEvent);
 	};
 };
 
