@@ -6,7 +6,8 @@ var cordovaVideoPlayernPlayer = function () {
 	};
 
 	this.didPlayfinished = function(data) {
-		var playFinishEvent = new CustomEvent('nPlayerDidPlayFinished', { 'playerSeed': data.playerSeed, 'lastPos': data.duration });
+		var playFinishEvent = new CustomEvent('nPlayerDidPlayFinished');
+		playFinishEvent.playerData = { 'playerSeed': data.playerSeed, 'duration': data.duration, 'currentTime': data.lastPos, 'fileHash': data.fileHash };
 		document.dispatchEvent(playFinishEvent);
 	};
 };
